@@ -17,7 +17,7 @@ public class test {
         int left =0;
         int right = nums.length-1;
         while(left < right){
-            int
+ int a;
             int sum = nums[left] + nums [right];
 
             if(sum == target)
