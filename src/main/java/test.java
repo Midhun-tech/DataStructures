@@ -1,16 +1,63 @@
 import java.util.*;
 
 public class test {
-    public static void main(String args[]) {
+
+        public static String[] calculateGrade(int[][] studentsMarks) {
+            int m = studentsMarks.length;
+            String[] grades = new String[m];
+
+            for (int i = 0; i < m; i++) {
+                int sum = 0;
+                int n = studentsMarks[i].length;
+
+                for (int j = 0; j < n; j++) {
+                    sum += studentsMarks[i][j];
+                }
+
+                int average = sum / n;
+
+                if (average >= 90) {
+                    grades[i] = "A+";
+                } else if (average >= 80) {
+                    grades[i] = "A";
+                } else if (average >= 70) {
+                    grades[i] = "B";
+                } else if (average >= 60) {
+                    grades[i] = "C";
+                } else if (average >= 50) {
+                    grades[i] = "D";
+                } else {
+                    grades[i] = "F";
+                }
+            }
+
+            return grades;
+        }
+
+        public static void main(String[] args) {
+            int[][] studentsMarks = {
+                    {66, 61, 88, 26, 13},
+                    {52, 38, 7, 74, 62}
+            };
+
+            String[] grades = calculateGrade(studentsMarks);
+
+            for (String grade : grades) {
+                System.out.println(grade);
+            }
+        }
+}
+
+    /*public static void main(String args[]) {
 
         String  s1 = "ab" ;
         String  s2 = "eidbaooo";
         System.out.println(checkInclusion(s1,s2));
 
-        /*String[] s = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        *//*String[] s = {"eat", "tea", "tan", "ate", "nat", "bat"};
         // System.out.println(groupAnagrams(s));.
         String[] s1 = new String[]{"", ""};
-        int[] nums = {0,3,7,2,5,8,4,6,0,1};*/
+        int[] nums = {0,3,7,2,5,8,4,6,0,1};*//*
         // String s = "abca";
         // String[] str = {"eat","tea","tan","ate","nat","bat"};
 
@@ -64,8 +111,8 @@ public class test {
 
         }
         return false;
-    }
-}
+    }*/
+
 
 
 

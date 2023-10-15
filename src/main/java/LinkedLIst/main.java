@@ -9,11 +9,10 @@ public class main {
         ll.add(10);
         ll.add(20);
         ll.add(30);
-        ll.display();
-
         // ll.insertLast(1);
        // ll.insertAtIndex(2,3);
-        ll.deleteAtIndex(2);
+       // ll.deleteAtIndex(2);
+        ll.display();
         ll.display();
 
     }

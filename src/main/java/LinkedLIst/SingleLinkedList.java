@@ -1,6 +1,7 @@
 package LinkedLIst;
 // Linked List in GeeksforGeeks
 // https://www.geeksforgeeks.org/linked-list-in-java/?ref=lbp
+// https://www.youtube.com/watch?v=58YbpRDc4yw&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=44
 
 public class SingleLinkedList {
 
@@ -10,6 +11,21 @@ public class SingleLinkedList {
 
     public SingleLinkedList() {
         this.size = 0;
+    }
+
+    public class Node{
+
+        private int val;
+        private Node next;
+
+        public Node(int val) {
+            this.val = val;
+        }
+
+        public Node(int val, Node next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 
     // adding values to linked list
@@ -27,7 +43,6 @@ public class SingleLinkedList {
     public void insertLast(int val){
         if (tail== null){
            add(val);
-           size++;
            return;
         }
         Node n = new Node(val);
@@ -77,6 +92,7 @@ public class SingleLinkedList {
         previous.next = previous.next.next;
     }
 
+
     public Node get(int index){
         if(index == 0){
             return head;
@@ -85,7 +101,6 @@ public class SingleLinkedList {
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-        System.out.println("Value at index " +index+"->" + temp.val);
         return temp;
     }
 
@@ -100,18 +115,6 @@ public class SingleLinkedList {
         System.out.println("END");
     }
 
-    public class Node{
 
-        private int val;
-        private Node next;
-
-        public Node(int val) {
-            this.val = val;
-        }
-
-        public Node(int val, Node next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }
+
