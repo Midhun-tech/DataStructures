@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ZigZagOrder {
 
-    public List<List<Integer>> levelOrder(TreeNode, root){
+    /*public List<List<Integer>> levelOrder(TreeNode, root){
 
         List<List<Integer>> result = new ArrayList<>();
 
@@ -49,5 +49,5 @@ public class ZigZagOrder {
             result.add(currentlevel);
         }
         return result;
-    }
+    }*/
 }
